@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Font Awesome Kit -->
+   <!-- <script src="https://kit.fontawesome.com/a2e71f3704.js" crossorigin="anonymous"></script> -->
+   <!-- External CSS -->
+   <link rel="stylesheet" href="style.css">
+   <title>Top Five</title>
+</head>
+<body>
+   <header>
+      <h3>Choose Your Top Five</h3>
+      <p>
+         Who is the best football player in the world? The answer will never be agreed upon, it will never be fully settled, it will never be definitively decided. Naturally, we thought it was a good idea to at least have a go at rounding up the best of the best in world football.
+      </p>
+   </header>
+   <main>
+      <section class="card-deck">
+         <div class="card card-1">
+            <img src="./images/player-1.png" alt="">
+            <h5>Lionel Messi</h5>
+            <p>36 goals <i class="fa-solid fa-circle-small">-</i> 120 assists</p>
+            <button class="button" onclick="addToList(this)">SELECT</button>
+         </div>
+         <div class="card card-2">
+            <img src="./images/player-2.png" alt="">
+            <h5>Vítor Machado</h5>
+            <p>36 goals <i class="fa-solid fa-circle-small">-</i> 120 assists</p>
+            <button class="button" onclick="addToList(this)">SELECT</button>
+         </div>
+         <div class="card card-3">
+            <img src="./images/player-3.png" alt="">
+            <h5>Neymar Jr.</h5>
+            <p>36 goals <i class="fa-solid fa-circle-small">-</i> 120 assists</p>
+            <button class="button" onclick="addToList(this)">SELECT</button>
+         </div>
+         <div class="card card-4">
+            <img src="./images/player-4.png" alt="">
+            <h5>Sergio Ramos</h5>
+            <p>36 goals <i class="fa-solid fa-circle-small">-</i> 120 assists</p>
+            <button class="button" onclick="addToList(this)">SELECT</button>
+         </div>
+         <div class="card card-5">
+            <img src="./images/player-5.png" alt="">
+            <h5>Kylian Mbappé</h5>
+            <p>36 goals <i class="fa-solid fa-circle-small">-</i> 120 assists</p>
+            <button class="button" onclick="addToList(this)">SELECT</button>
+         </div>
+         <div class="card card-6">
+            <img src="./images/player-6.png" alt="">
+            <h5>Renato Sanches</h5>
+            <p>36 goals <i class="fa-solid fa-circle-small">-</i> 120 assists</p>
+            <button class="button" onclick="addToList(this)">SELECT</button>
+         </div>
+         <div class="card card-7">
+            <img src="./images/player-1.png" alt="">
+            <h5>Lionel Messi</h5>
+            <p>36 goals <i class="fa-solid fa-circle-small">-</i> 120 assists</p>
+            <button class="button" onclick="addToList(this)">SELECT</button>
+         </div>
+         <div class="card card-8">
+            <img src="./images/player-2.png" alt="">
+            <h5>Vítor Machado</h5>
+            <p>36 goals <i class="fa-solid fa-circle-small">-</i> 120 assists</p>
+            <button class="button" onclick="addToList(this)">SELECT</button>
+         </div>
+         <div class="card card-9">
+            <img src="./images/player-3.png" alt="">
+            <h5>Neymar Jr.</h5>
+            <p>36 goals <i class="fa-solid fa-circle-small">-</i> 120 assists</p>
+            <button class="button" onclick="addToList(this)">SELECT</button>
+         </div>
+         
+      </section>
+      <aside>
+         <section class="selected-five">
+            <h3>Selected V</h3>
+            <ol id="list">
+
+            </ol>
+            <p><span id="no.-of-players">0</span> players selected</p>
+         </section>
+         <section>
+            <h3>Budget</h3>
+            <div>
+               <p>Per Player</p>
+               <input id="paidAmount" class="form-control" type="text" placeholder="$ Amount you want to pay" autofocus>
+               <br>
+               <!-- Deposit Button -->
+               <button id="addPlayerAmount" class="btn btn-success">Calculate</button>
+               <p>Player Expenses $<span id="player-expense">0</span></p>
+            </div>
+            <hr>
+            <div>
+               <p>Manager</p>
+               <input id="managerPaidAmount" class="form-control" type="text" placeholder="$ Amount you want to manager">
+               <br>
+               <p>Coach</p>
+               <input id="coachPaidAmount" class="form-control" type="text" placeholder="$ Amount you want to coach">
+               <br>
+               <!-- Withdraw Button -->
+               <button id="addManagerialAmount" class="btn btn-danger">Calculate Total</button>
+               <p>Total Expense $<span id="managerial-expense">0</span></p>
+            </div>
+         </section>
+      </aside>
+   </main>
+   <footer>
+      <hr>
+      <p>Copyright @ 2022 All Rights Reserved.</p>
+   </footer>
+
+   <!-- External Script -->
+   <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+*{
+   /* outline: 1px solid red; */
+   /* background-color: #ff000010; */
+}
+
+body{
+   color: white;
+   background-color: #151515;
+   font-family: poppins;
+   max-width: 1440px;
+   margin: 0 auto;
+}
+
+header{
+   height: 480px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: #000;
+   background-image: url(./images/banner-image.png);
+   background-repeat: no-repeat;
+   /* background-image: url(./images/banner-image-2.png); */
+}
+
+main{
+   max-width: 1200px;
+   margin: 50px auto;
+   display: flex;
+}
+
+header h3{
+   font-size: 60px;
+}
+
+header p{
+   margin: 0 300px;
+}
+
+.card-deck{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.card{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   margin: 25px;
+   background-color: #000;
+}
+
+.card h5{
+   font-size: 24px;
+   margin: 0;
+   padding: 10px 0 0 0;
+}
+
+button{
+   color: white;
+   background-color: #015196;
+   border: none;
+   padding: 10px 0;
+}
+
+button:disabled{
+   background-color: #A2A9AF;
+}
+
+aside section{
+   display: flex;
+   flex-direction: column;
+   width: 264px;
+   background-color: black;
+   padding: 25px;
+   margin: 25px;
+}
+
+aside section h3{
+   text-align: center;
+}
+
+aside section hr {
+   width: 100%;
+   border-top: 1px solid grey;
+}
+
+aside section input{
+   padding: 5px;
+   /* width: ; */
+}
+
+aside section button{
+   margin-top: 5px;
+   /* padding: 10px 30px; */
+   width: 100%;
+}
+ 
+
+footer p{
+   text-align: center;
+   color: grey;
+   height: 70px;
+   padding-top: 50px;
+}
