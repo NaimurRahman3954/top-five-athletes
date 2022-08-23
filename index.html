@@ -87,7 +87,7 @@
             <h3>Budget</h3>
             <div>
                <p>Per Player</p>
-               <input id="paidAmount" class="form-control" type="text" placeholder="$ Amount you want to pay" autofocus>
+               <input id="paidAmount" class="form-control" type="number" onkeypress='validate(event)' placeholder="$ Amount you want to pay" autofocus>
                <br>
                <!-- Deposit Button -->
                <button id="addPlayerAmount" class="btn btn-success">Calculate</button>
@@ -96,10 +96,10 @@
             <hr>
             <div>
                <p>Manager</p>
-               <input id="managerPaidAmount" class="form-control" type="text" placeholder="$ Amount you want to manager">
+               <input id="managerPaidAmount" class="form-control" type="number"  onkeypress='validate(event)' placeholder="$ Amount you want to manager">
                <br>
                <p>Coach</p>
-               <input id="coachPaidAmount" class="form-control" type="text" placeholder="$ Amount you want to coach">
+               <input id="coachPaidAmount" class="form-control" type="number" onkeypress='validate(event)' placeholder="$ Amount you want to coach">
                <br>
                <!-- Withdraw Button -->
                <button id="addManagerialAmount" class="btn btn-danger">Calculate Total</button>
