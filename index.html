@@ -79,13 +79,34 @@
          <section class="selected-five">
             <h3>Selected V</h3>
             <ol id="list">
-               <!-- <li>Messi</li>
-               <li>Ronaldo</li> -->
+
             </ol>
             <p><span id="no.-of-players">0</span> players selected</p>
          </section>
          <section>
             <h3>Budget</h3>
+            <div>
+               <p>Per Player</p>
+               <input id="paidAmount" class="form-control" type="text" placeholder="$ Amount you want to pay" autofocus>
+               <br>
+               <!-- Deposit Button -->
+               <button id="addPlayerAmount" class="btn btn-success">Calculate</button>
+               <p>Player Expenses $<span id="player-expense">0</span></p>
+            </div>
+
+
+            <hr>
+            <div>
+               <p>Manager</p>
+               <input id="managerPaidAmount" class="form-control" type="text" placeholder="$ Amount you want to manager">
+               <br>
+               <p>Coach</p>
+               <input id="coachPaidAmount" class="form-control" type="text" placeholder="$ Amount you want to coach">
+               <br>
+               <!-- Withdraw Button -->
+               <button id="addManagerialAmount" class="btn btn-danger">Calculate Total</button>
+               <p>Total Expense $<span id="managerial-expense">0</span></p>
+            </div>
          </section>
       </aside>
    </main>

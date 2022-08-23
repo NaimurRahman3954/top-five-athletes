@@ -1,44 +1,69 @@
 const buttons = document.querySelectorAll(".button");
-var node = document.createElement('li');
+// var node = document.createElement('li');
 const players = [];
 
 function display(players){
    const listItems = document.getElementById('list');
    listItems.innerHTML = '';
    for (let i = 0; i < players.length; i++) {
-      const element = players[i];
-      console.log(element);
+      if (i<5){
 
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `
-      ${element}
-      `;
-      listItems.appendChild(listItem);
+         const element = players[i];
+         const listItem = document.createElement('li');
+         listItem.innerHTML = `${element}`;
+         listItems.appendChild(listItem);
+      }
+      else{
+         alert("You cannot add more than 5 players");
+         return
+      }
    }
 }
 
 function addToList(element){
+   // Selecting player name from cards
    const playerName = element.parentNode.children[1].innerText;
-   // console.log(playerName);
 
+   // adding player name to players array
    players.push(playerName);
-   // let numberOfPlayers = document.querySelectorAll(".list li").length;
-   console.log(players);
-   // console.log(numberOfPlayers);
-   // document.getElementById('no.-of-players').innerText = numberOfPlayers;
+
+   // calculating numbers of players selected
    document.getElementById('no.-of-players').innerText = players.length;
 
+   // calling display function to display players' names as a list
    display(players);
 }
 
 buttons.forEach((item) => {
    item.addEventListener("click", ()=>{
-
-      // disable button
+      // disable button on click
       item.disabled = true;
-
-      // add to list
-      // node.appendChild(document.createTextNode('Scooter'));
-      // document.querySelector('ol').appendChild(node);
    })            
+})
+
+// calculating players' cost
+const playerAmountBtn = document.getElementById("addPlayerAmount");
+playerAmountBtn.addEventListener("click", function(){
+   const playerAmount = document.getElementById("paidAmount").value; 
+   const playerExpense = parseFloat(playerAmount)*players.length;
+
+   document.getElementById("player-expense").innerText = playerExpense;
+
+   // clearing the input fields
+   document.getElementById("paidAmount").value = "";
+})
+
+// calculating managerial cost
+const managerialAmountBtn = document.getElementById("addManagerialAmount");
+managerialAmountBtn.addEventListener("click", function(){
+   const managerAmount = document.getElementById("managerPaidAmount").value; 
+   const coachAmount = document.getElementById("coachPaidAmount").value; 
+   const managerialExpense = parseFloat(managerAmount)+ parseFloat(coachAmount);
+
+   const playerExpense = parseFloat(document.getElementById("player-expense").innerText);
+   document.getElementById("managerial-expense").innerText = playerExpense + managerialExpense;
+
+   // clearing the input fields
+   document.getElementById("managerPaidAmount").value = "";
+   document.getElementById("coachPaidAmount").value = "";
 })

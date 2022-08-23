@@ -82,6 +82,12 @@ aside section h3{
    text-align: center;
 }
 
+aside section hr {
+   width: 100%;
+   border-top: 1px solid grey;
+}
+ 
+
 footer p{
    text-align: center;
    color: grey;
