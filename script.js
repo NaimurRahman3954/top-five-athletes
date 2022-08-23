@@ -1,5 +1,12 @@
 const buttons = document.querySelectorAll(".button");
-// var node = document.createElement('li');
+
+buttons.forEach((item) => {
+   item.addEventListener("click", ()=>{
+      // disable button on click
+      item.disabled = true;
+   })            
+})
+
 const players = [];
 
 function display(players){
@@ -7,7 +14,7 @@ function display(players){
    listItems.innerHTML = '';
    for (let i = 0; i < players.length; i++) {
       if (i<5){
-
+         
          const element = players[i];
          const listItem = document.createElement('li');
          listItem.innerHTML = `${element}`;
@@ -15,7 +22,8 @@ function display(players){
       }
       else{
          alert("You cannot add more than 5 players");
-         return
+         players.pop();
+         return;
       }
    }
 }
@@ -27,19 +35,12 @@ function addToList(element){
    // adding player name to players array
    players.push(playerName);
 
-   // calculating numbers of players selected
-   document.getElementById('no.-of-players').innerText = players.length;
-
    // calling display function to display players' names as a list
    display(players);
-}
 
-buttons.forEach((item) => {
-   item.addEventListener("click", ()=>{
-      // disable button on click
-      item.disabled = true;
-   })            
-})
+   // calculating numbers of players selected
+   document.getElementById('no.-of-players').innerText = players.length;
+}
 
 // calculating players' cost
 const playerAmountBtn = document.getElementById("addPlayerAmount");

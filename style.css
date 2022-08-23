@@ -86,6 +86,17 @@ aside section hr {
    width: 100%;
    border-top: 1px solid grey;
 }
+
+aside section input{
+   padding: 5px;
+   /* width: ; */
+}
+
+aside section button{
+   margin-top: 5px;
+   /* padding: 10px 30px; */
+   width: 100%;
+}
  
 
 footer p{
