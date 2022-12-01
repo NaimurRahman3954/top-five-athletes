@@ -1,6 +1,3 @@
-# Select Best Five Landing Page
-Please create yoru private repo 
-## [https://classroom.github.com/a/_LNX3tEE](https://classroom.github.com/a/_LNX3tEE)
+# Top Five Atheletes
 
-### Private Repo Link: [https://classroom.github.com/a/_LNX3tEE](https://classroom.github.com/a/_LNX3tEE)
-# best-five-dom-assignment-NaimurRahman3954
+#Live Site: https://chimerical-entremet-960d54.netlify.app/
